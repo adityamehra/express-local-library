@@ -217,8 +217,7 @@ function(err, results) {
         console.log('FINAL ERR: '+err);
     }
     else {
-        console.log('BOOKInstances: '+bookinstances);
-        
+        console.log('BOOKInstances: '+bookinstances);   
     }
     //All done, disconnect from database
     mongoose.connection.close();
