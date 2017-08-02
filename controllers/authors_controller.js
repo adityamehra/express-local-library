@@ -7,7 +7,8 @@ exports.getAllAuthors = function(req, res, next) {
   	Author
   		.find()
 		.then( authors => {
-		    res.send(authors);  
+		    // res.send(authors);
+		    res.render('authors', { 'authors': authors})
 		})
 		.catch( err => {
 			console.log("Error in all allAuthors " + err);
@@ -21,7 +22,7 @@ exports.getAuthor = function(req, res, next) {
 		    res.send(author);  
 		})
 		.catch( err => {
-			console.log("Error in all allAuthors " + err);
+			console.log("Error in getAuthor " + err);
 		});
 }
 
