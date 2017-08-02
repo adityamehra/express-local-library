@@ -7,8 +7,8 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
 var credentials = require('./credentials.js')
-var catalog_routes = require('./routes/catalog_routes');
 var index = require('./routes/index');
+var catalog_routes = require('./routes/catalog_routes');
 
 var app = express();
 
@@ -18,7 +18,6 @@ app.set('view engine', 'jade');
 
 
 mongoose.Promise = global.Promise;
-
 var mongoDB = 'mongodb://'+credentials.getUsername()+':'+credentials.getPassword()+'@ds121483.mlab.com:21483/local_library';
 mongoose.connect(mongoDB);
 var db = mongoose.connection;
