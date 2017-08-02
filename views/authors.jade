@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1 Authors
+  
+  each author in authors
+    a(href=author.url) #{author.name}
+    p !{author.date_of_birth}
+    hr
