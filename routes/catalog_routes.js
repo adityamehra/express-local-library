@@ -5,7 +5,6 @@ var Author = require('../models/author')
 var authors_controller = require('../controllers/authors_controller');
 var books_controller = require('../controllers/books_controller');
 var genre_controller = require('../controllers/genre_controller');
-var books_controller = require('../controllers/books_controller');
 
 /* GET routes for author listings. */
 router.get('/authors', authors_controller.getAllAuthors);
@@ -13,8 +12,11 @@ router.get('/author/:id', authors_controller.getAuthor);
 router.get('/author/info/:id', authors_controller.getAuthorInfo);
 
 router.get('/books', books_controller.getAllBooks);
-// router.get('/author/:id', authors_controller.getAuthor);
-// router.get('/author/info/:id', authors_controller.getAuthorInfo);
+router.get('/book/:id', books_controller.getBook);
+// router.get('/book/info/:id', authors_controller.getBookInfo);
 
 router.get('/genres', genre_controller.getAllGenres);
+router.get('/genres/:id', genre_controller.getGenre);
+// router.get('/genres/info/:id', genre_controller.getAllGenreInfo);
+
 module.exports = router;
