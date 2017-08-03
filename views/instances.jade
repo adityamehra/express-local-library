@@ -1,0 +1,10 @@
+extends layout
+
+block content
+	h1 Authors
+  
+	each instance in instances
+		h3 !{instance.book.title}
+		h3 !{instance.book.isbn}
+		h3 !{instance.status}
+		hr
